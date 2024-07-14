@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8" />
+   <title>Photo Viewer</title>
+   <link rel="stylesheet" href="style.css" />
+   <script src="code.js"></script>
+ </head>
+
+
+ <body>
+   <div id="content-container">
+     <br />
+     <form id="myForm">
+       <strong class="title">Photo Viewer</strong>
+       <div id="photoArray">
+         <img src="InitialImage.jpg" alt="Initial Image" id="initialImage" />
+       </div>
+       <fieldset>
+         <legend>
+           <em>Status</em>
+         </legend>
+         Photo Being Displayed:<input
+           id="name"
+           class="photo-being-displayed"
+           type="text"
+           disabled
+         /><br />
+         <div class="status-message">Photo Viewer System</div>
+         <div class="error-message" id="errorMessage"></div>
+       </fieldset>
+       <fieldset>
+         <legend>
+           <em>Loading Images (Local Folder)</em>
+         </legend>
+         Photos' Folder:<input id="folderName" type="text" name="folderName" value="umcp/"/>
+         Common Name:<input
+           id="commonName"
+           type="text"
+           name="commonName"
+           value="college"
+         /><br />
+         Start Photo Number:<input
+           id="startNumber"
+           type="text"
+           name="startNumber"
+           value="2"
+         />
+         End Photo Number:<input id="endNumber" type="text" name="endNumber" value="4" />
+         <input type="button" id="loadPhotosButton" value="Load Photos" />
+       </fieldset>
+       <fieldset>
+         <legend>
+           <em>Loading Images (JSON File)</em>
+         </legend>
+         URL:<input
+           id="name"
+           type="text"
+           class="photo-being-displayed"
+           value="http://www.cs.umd.edu/~nelson/classes/resources/cmsc335/images/imagesSet1.json"
+         />
+         <input type="button" id="loadJSON" value="Load JSON" />
+       </fieldset>
+       <fieldset>
+         <legend>
+           <em>Iterating</em>
+         </legend>
+         <input type="button" id="previousPhoto" value="Previous Photo" />
+         <input type="button" id="nextPhoto" value="Next Photo" />
+         <input type="button" id="firstPhoto" value="First Photo" />
+         <input type="button" id="lastPhoto" value="Last Photo" />
+       </fieldset>
+       <fieldset>
+         <legend>
+           <em>SlideShows</em>
+         </legend>
+         <input type="button" id="slideShow" value="SlideShow" />
+         <input type="button" id="randomSlideShow" value="RandomSlideShow" />
+         <input type="button" id="stopSlideShow" value="StopSlideShow" />
+       </fieldset>
+       <hr />
+       <input type="reset" value="Reset Form Values" />
+     </form>
+   </div>
+   <script src="code.js"></script>
+ </body>
+</html>
